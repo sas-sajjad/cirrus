@@ -19,6 +19,5 @@ task:
           - /home/cirrus:/home/cirrus
           - /home/cirrus/ccache:/home/cirrus/ccache
           - /home/cirrus/.config:/home/cirrus/.config
-  show_script: cat $CIRRUS_WORKING_DIR/build_rom.sh
   notify_script: bash <(curl -s $script/sync.sh)
   test_script: bash <(curl -s $script/build.sh)
